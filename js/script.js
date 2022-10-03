@@ -10,8 +10,8 @@ function numberEntry() {
     // refocus on fill field
     document.getElementById("fill-in").focus();
 
-    // if num is a number, do this
-    if (isNaN(num) === false) {
+    // if num is a number, do this (this also checks if there's no entry at all)
+    if (isNaN(num) === false && num !== "") {
         ENTRIES[counter] = Number(num); // assign the numeric value of num to the respective ENTRIES array variable
         console.log(ENTRIES[counter]); // just felt bare without it
         counter += 1; // increment the counter, because there's a viable entry
